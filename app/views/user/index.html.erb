@@ -1,0 +1,13 @@
+<h1>ユーザ一覧</h1>
+<%= flash[:message]%>
+<ul>
+    <% session[:errors].each do |error| %>
+        <li><%= error %></li>
+    <% end %>
+</ul>
+
+<% @users.each do |user| %>
+    <p><%= user.name %>　　<%= user.password %></p>
+<% end %>
+
+<%= link_to '新規ユーザ追加', user_new_path  %>

@@ -1,0 +1,8 @@
+<h1>新規ユーザ登録</h1>
+<%= form_for @user, url: user_create_path do |f|  %>
+    <p>名前<%= f.text_field :name %></p>
+    <p>パスワード<%= f.text_field :password %></p>
+    <%= f.submit '作成' %>
+<% end %>
+
+<%= link_to 'ユーザ一覧へ', root_path %>
